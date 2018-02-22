@@ -34,6 +34,7 @@ public class KlavaPage extends BasePage {
   public void clickByChangeKlava() {
     fifteenSecondsWait.until(ExpectedConditions.visibilityOfElementLocated(ChangeLanguageKlavaClick));
     click((ChangeLanguageKlavaClick));
+    click((EnglishKlavaButton));
   }
 
   public void typeTheWords() {
@@ -56,6 +57,9 @@ public class KlavaPage extends BasePage {
       sleep(100);
       wd.findElement(By.xpath(String.format(keyButtonMini, v))).click();
     }
+    String text = getElement(InputField).getAttribute("value");
+    System.out.println("Текст в поле: " + text);
+    assertEquals(text, "java", "java");
   }
 
   public void checkTheKlavaPresent() {
