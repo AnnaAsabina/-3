@@ -54,7 +54,6 @@ public class KlavaPage extends BasePage {
    // WebElement keyboard = wd.findElement(keyButtonMini);
     for (char v : value.toCharArray()) {
       sleep(100);
-      sleep(100);
       wd.findElement(By.xpath(String.format(keyButtonMini, v))).click();
     }
   }
