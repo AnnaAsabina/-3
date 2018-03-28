@@ -24,6 +24,8 @@ public class BasePage {
 		wd.findElement(locator).click();
 	}
 
+	protected void clear(By locator){wd.findElement(locator).clear();}
+
 	protected void type(By locator, String text) {
 		click(locator);
 		if(text != null){

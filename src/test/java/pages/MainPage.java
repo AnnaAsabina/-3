@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 
 public class MainPage extends BasePage {
 
@@ -12,6 +13,7 @@ public class MainPage extends BasePage {
 	private static final By CheckboxRememberMe = By.xpath ("//input[@id='mailbox:saveauth']");
 	private static final By cloudSymbol = By.xpath("//a[contains(@class, 'mailbox__icon_cloud')]");
 	private static final By calendarSymbol = By.xpath("//a[contains(@class,' mailbox__icon_calendar')]");
+	private static final By initTheRegistrationOfaNewMail =By.xpath("//a[@class='mailbox__footer']");
 	public MainPage(WebDriver wd) {
 		super(wd);
 	}
@@ -31,4 +33,9 @@ public class MainPage extends BasePage {
 	}
 
 	public void clickKalendar() {click(calendarSymbol);}
+
+	public  void RegistrationOfaNewMail(){
+		click(initTheRegistrationOfaNewMail);
+
+	}
 }
